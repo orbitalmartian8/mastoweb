@@ -1,13 +1,17 @@
-const instanceUrl = 'https://mastodon.example.com';
+let instanceUrl;
 const clientId = 'your-client-id';
 const clientSecret = 'your-client-secret';
 const redirectUri = 'https://your-redirect-uri.com';
 
 const loginButton = document.getElementById('login-button');
 const rootElement = document.getElementById('root');
+const instanceUrlInput = document.getElementById('instance-url');
 
 // Add a click event listener to the login button
 loginButton.addEventListener('click', () => {
+  // Get the value of the instance URL input field
+  instanceUrl = instanceUrlInput.value;
+
   // Create a URL for the Mastodon instance's authorization endpoint
   const authUrl = `${instanceUrl}/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}`;
 
