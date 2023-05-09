@@ -1,7 +1,7 @@
 let instanceUrl;
 const clientId = 'your-client-id';
 const clientSecret = 'your-client-secret';
-const redirectUri = 'https://your-redirect-uri.com';
+const redirectPath = '/redirect.html';
 
 const loginButton = document.getElementById('login-button');
 const rootElement = document.getElementById('root');
@@ -13,6 +13,7 @@ loginButton.addEventListener('click', () => {
   instanceUrl = instanceUrlInput.value;
 
   // Create a URL for the Mastodon instance's authorization endpoint
+  const redirectUri = `${window.location.origin}${redirectPath}`;
   const authUrl = `${instanceUrl}/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}`;
 
   // Redirect the user to the authorization URL
@@ -20,7 +21,7 @@ loginButton.addEventListener('click', () => {
 });
 
 // Check if the URL includes an authorization code
-if (window.location.search.includes('code=')) {
+if (window.location.pathname === redirectPath && window.location.search.includes('code=')) {
   // Extract the authorization code from the URL
   const code = new URLSearchParams(window.location.search).get('code');
 
@@ -34,7 +35,7 @@ if (window.location.search.includes('code=')) {
       client_id: clientId,
       client_secret: clientSecret,
       grant_type: 'authorization_code',
-      redirect_uri: redirectUri,
+      redirect_uri: `${window.location.origin}${redirectPath}`,
       code: code
     })
   })
