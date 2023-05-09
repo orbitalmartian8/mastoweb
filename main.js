@@ -1,5 +1,5 @@
 let instanceUrl;
-const clientId = '-IYxFEpA9-8xiKEsdkHg7A-Cd-_srC5v1q3LNur6lQ8';
+const clientId = 'IYxFEpA9-8xiKEsdkHg7A-Cd-_srC5v1q3LNur6lQ8';
 const clientSecret = 'NcpS3rtYXdT6QE9RYvj_UPBg_KIiZiGBmd_3dLka-5M';
 const redirectPath = '/redirect.html';
 
