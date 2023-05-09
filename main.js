@@ -1,7 +1,7 @@
 const instanceUrl = 'https://linuxrocks.online';
 
 // Fetch the public timeline from the Mastodon API
-fetch(`${instanceUrl}/api/v1/timelines/public`)
+fetch(`${instanceUrl}/api/v1/timelines/local`)
   .then(response => response.json())
   .then(posts => {
     // Create an array of HTML elements representing the posts
