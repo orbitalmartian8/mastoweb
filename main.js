@@ -1,6 +1,6 @@
 let instanceUrl;
-const clientId = 'your-client-id';
-const clientSecret = 'your-client-secret';
+const clientId = '-IYxFEpA9-8xiKEsdkHg7A-Cd-_srC5v1q3LNur6lQ8';
+const clientSecret = 'NcpS3rtYXdT6QE9RYvj_UPBg_KIiZiGBmd_3dLka-5M';
 const redirectPath = '/redirect.html';
 
 const loginButton = document.getElementById('login-button');
