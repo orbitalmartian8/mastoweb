@@ -1,4 +1,4 @@
-const instanceUrl = 'https://mastodon.example.com';
+const instanceUrl = 'https://linuxrocks.online';
 const clientId = 'your-client-id';
 const clientSecret = 'your-client-secret';
 const redirectUri = 'https://your-redirect-uri.com';
