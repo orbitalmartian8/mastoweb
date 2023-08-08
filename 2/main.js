@@ -8,7 +8,7 @@ fetch(`${instanceUrl}/api/v1/timelines/public`)
     const postElements = posts.map(post => {
       return `
         <div>
-          <p><strong>${post.account.display_name}</strong> (@${post.account.username})</p>
+          <p><strong>${post.account.display_name}</strong> (@${post.account.username}@${post.account.instance_name})</p>
           <p>${post.content}</p>
         </div>
       `;
